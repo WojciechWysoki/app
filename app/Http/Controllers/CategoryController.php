@@ -37,4 +37,23 @@ class CategoryController extends Controller
         return view("category", ["category"=>$category]);
     }
     
+    public function create() {
+        $data = request()->all();
+        $category = new Category();
+        $category->name = array_get($data, "name");
+        $category->save();
+        return redirect(route("category.get"));
+    }
+   public function xhrGetArticlesByCategory() {
+       $id = request()->route("id");
+  //      if(is_null($id)) {
+     //       $categories = Category::all();
+  //          return view("categories", ["categories"=>$categories]);
+   //     }
+        $category = Category::find($id);
+    //    if(is_null($category)) {
+    //        return redirect("category");
+    //    }
+        return response()->json($category->articles);
+   }
 }
