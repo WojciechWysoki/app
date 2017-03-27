@@ -6,9 +6,9 @@
 <body>
 <h3>{{$category->name}}</h3>
 <ul id="list">
-<!--@foreach ($category->articles as $article)
+@foreach ($category->articles as $article)
 <li><a href="{{route("article.get", ["id"=>$article->id])}}">{{$article->title}}</a></li>
- @endforeach -->
+ @endforeach
 
 </ul>
 <form method="POST" action="{{route("article.post")}}">

@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
 <html>
     <head>
@@ -41,5 +42,26 @@
                 <div class="title">Laravel 5</div>
             </div>
         </div>
+    </body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-9">
+        <link href="{{asset('bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{{asset('css/main.css') }}">
+    </head>
+    <body>
+        @include('menu')
+        <section class='main-section'>
+            <header>
+                
+            </header>
+            <article>
+                @yield('content')
+            </article>
+        </section>
     </body>
 </html>

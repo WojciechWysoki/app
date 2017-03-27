@@ -1,0 +1,37 @@
+body {
+    background: url('../background.jpeg') no-repeat fixed;
+    background-size: cover;
+    margin: 0;
+}
+.main-section {
+    margin: 30px auto;
+    text-align: initial;
+    width: 70vw;
+    background: white;
+    padding: 15px;
+    opacity: .9;
+}
+
+.main-menu {
+    margin: 0 auto;
+    text-align: initial;
+    width: 70vw;
+    padding: 0;
+    background: transparent;
+}
+
+.main-menu ul {
+    list-style: none;
+}
+
+.main-menu ul li {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    background: white;
+    padding: 15px 0;
+}
+
+.main-menu ul li:hover {
+    opacity: .7;
+}

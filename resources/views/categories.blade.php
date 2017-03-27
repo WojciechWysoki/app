@@ -1,4 +1,5 @@
-<!--
+@extends('welcome')
+@section('content')
 <ul>
     @foreach($categories as $category)
     <li><a href="{{route("category.get", ["id"=>$category->id])}}">{{$category->name}}</a></li>
@@ -14,22 +15,4 @@
     <button type="reset" class="btn btn-default">Cancel</button>
   </div>
 </form>
--->
-
-<!DOCTYPE html>
-<html>
-    <head>
-        <link href="{{asset('bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
-        <script src="{{asset("jquery.js")
-    <har>
-        
-        <section>
-            <header>
-                
-            </header>
-                <article>
-                    
-                </article>
-        
-    </har>
-</body>
+@stop
