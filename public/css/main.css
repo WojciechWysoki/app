@@ -4,24 +4,30 @@ body {
     margin: 0;
 }
 .main-section {
-    margin: 30px auto;
+ 
     text-align: initial;
-    width: 70vw;
+
     background: white;
     padding: 15px;
     opacity: .9;
 }
 
+button{
+    border-radius: 0 !important;
+
+    }
 .main-menu {
-    margin: 0 auto;
-    text-align: initial;
-    width: 70vw;
+   
+    text-align: center;
+   
     padding: 0;
     background: transparent;
 }
 
 .main-menu ul {
     list-style: none;
+    margin:0;
+    padding:0;
 }
 
 .main-menu ul li {
@@ -29,7 +35,7 @@ body {
     text-align: center;
     width: 100%;
     background: white;
-    padding: 15px 0;
+    padding: 15px ;
 }
 
 .main-menu ul li:hover {

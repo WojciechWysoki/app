@@ -16,11 +16,12 @@ class ArticleController extends Controller
         $article->content = array_get($data, "content");
         $article->category_id = array_get($data, "category_id");
         $article->save();
-        return redirect(route("category.get", ["id"=>array_get($data, "category_id")]));
+        return redirect(route("article.get", ["id"=>array_get($data, "category_id")]));
     }
     
     public function get() {
+        $id=request()->route("id");
         $category=Category::find($id);
-        return view ("category", ["category"=>$category]);
+        return view ("article", ["category"=>$category]);
     }
 }
