@@ -49,6 +49,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+                        <script src={{asset("bootstrap/js/jquery-3.2.0.min.js")}}></script>
             <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -59,9 +60,10 @@
     </head>
     <body class="container-fluid">
           <header>
-                
             </header>
         @include('menu')
+        
+        <button id="change_background"type="button" class="btn btn-default">Change background</button>
         <div class="row">
         
           <div class="col-sm-2"></div>
@@ -85,3 +87,20 @@
     </html>
     </body>
 </html>
+
+<script>
+    var zmienna = 0;
+    $("#change_background").click(function(){
+        if(zmienna === 0)
+        {
+            zmienna = 1;
+            $('body').css('background', 'url("../background_new.jpeg") no-repeat fixed')
+            $('body').css('background-size', 'cover')
+        }
+        else
+        {
+            zmienna = 0;
+            $('body').css('background', 'url("../background.jpeg") no-repeat fixed')
+        }
+ });
+</script>

@@ -51,7 +51,7 @@ class CategoryController extends Controller
   //          return view("categories", ["categories"=>$categories]);
    //     }
         $category = Category::find($id);
-    //    if(is_null($category)) {
+    //   if(is_null($category)) {
     //        return redirect("category");
     //    }
         return response()->json($category->articles);

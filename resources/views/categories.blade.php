@@ -8,11 +8,22 @@
 <form method="POST">
   <div class="form-group">
     <label>Category name</label>
-    <input name="name" type="text" class="form-control" placeholder="...">
+    <input id="input_label" name="name" type="text" class="form-control" placeholder="...">
   </div>
   <div class="btn-group" role="group" aria-label="...">
-    <button type="submit" class="btn btn-default">Create</button>
+    <button id="button_od_dodawania" type="submit" class="btn btn-default" disabled="">Create</button>
     <button type="reset" class="btn btn-default">Cancel</button>
   </div>
 </form>
+<script>
+    $('#input_label').on('keyup', function() {
+        var zawartosc = $('#input_label').val();
+        if(zawartosc.length === 0) {
+            $('#button_od_dodawania').attr('disabled', 'true');
+        }
+        else if(zawartosc.length > 0) {
+            $('#button_od_dodawania').removeAttr('disabled');
+        }
+    })
+</script>
 @stop
