@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Category;
 use App\Article;
 use App\Http\Requests;
+use App\Comment;
 
 class ArticleController extends Controller
 {
@@ -22,6 +23,13 @@ class ArticleController extends Controller
     public function get() {
         $id=request()->route("id");
         $category=Category::find($id);
-        return view ("article", ["category"=>$category]);
+        $article=Article::find($id);
+        return view ("article", ["category"=>$category, "article"=>$article]);
     }
+    
+       public function xhrGetCommentsByArticle() {
+       $id = request()->route("id");
+        $article = Article::find($id);
+        return response()->json($article->comment);
+   }
 }

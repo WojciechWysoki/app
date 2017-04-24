@@ -29,9 +29,10 @@
 
 <script>
 $("#id_button_show").click(function (){
+    $("#list").empty();
         $.get("<?php echo route("xhr.category.get", ["id" => $category->id]) ?>", function(data, status){
         for(var i=0;i<data.length;i++) {
-        $("#list").append('<li><a href="/article"'+data[i].id+'">'+data.title+'</a></li>');
+                $("#list").append('<li><a href="/article"'+data[i].id+'>'+data[i].title+'</a></li>');
     }
 //        alert("Data: " + data + "\nStatus: " + status);
         });

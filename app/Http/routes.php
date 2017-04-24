@@ -20,7 +20,10 @@ Route::get('/category/{id?}', array('as' => 'category.get', 'uses' => 'CategoryC
 Route::get('/article/{id?}', array('as' => 'article.get', 'uses' => 'ArticleController@get'));
 Route::post('/category', array('as' => 'category.post', 'uses' => 'CategoryController@create'));
 Route::post('/article', array('as' => 'article.post', 'uses' => 'ArticleController@create'));
+Route::get('/comment/{id?}', array('as' => 'comment.get', 'uses' => 'CommentController@get'));
+Route::post('/comment', array('as' => 'comment.post', 'uses' => 'CommentController@create'));
 Route::get('xhr/category/{id?}/article', array('as' => 'xhr.category.get', 'uses' => 'CategoryController@xhrGetArticlesByCategory'));
+Route::get('xhr/article/{id?}/comment', array('as' => 'xhr.article.get', 'uses' => 'ArticleController@xhrGetACommentsByCategory'));
     
         
     

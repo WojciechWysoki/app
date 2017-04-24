@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comment extends Model
 {
-     protected $table="comments";
+     protected $table="comment";
      
       public function article() {
         return $this->belongsTo('App\Article');

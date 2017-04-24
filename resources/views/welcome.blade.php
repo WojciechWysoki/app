@@ -63,7 +63,7 @@
             </header>
         @include('menu')
         
-        <button id="change_background"type="button" class="btn btn-default">Change background</button>
+        <button onClick="javascript:history.go(-1)" type="button" class="btn btn-default">Return</button>
         <div class="row">
         
           <div class="col-sm-2"></div>
@@ -78,7 +78,7 @@
           <div class="col-sm-2"></div>
         
             </div>
-        
+        <button id="change_background" type="button" class="btn btn-default">Change background</button>
          <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
