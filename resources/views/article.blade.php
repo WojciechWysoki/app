@@ -5,6 +5,12 @@
 <h3>{{$article->title}}</h3>
 <textarea disabled="true" name="content" type="text" class="form-control" rows="15" >{{$article->content}}</textarea>
 
+<ul id="list">
+    @foreach ($article->comment as $comment)
+        <li><a href="{{route("comment.get", ["id"=>$comment->id])}}">{{$comment->author}}</a></li>
+    @endforeach
+</ul>
+
 <form method="POST" action="{{route("comment.post")}}">
   <div class="form-group">
     <label>Author</label>
@@ -16,7 +22,7 @@
     <textarea id="text-area" name="content" type="text" class="form-control" rows="15" placeholder="..."></textarea>
   </div>
     
-    <input id="content" name="category_id" type="hidden" class="form-control" value="{{$article->id}}">
+    <input id="content" name="article_id" type="hidden" class="form-control" value="{{$article->id}}">
   <div class="btn-group" role="group" aria-label="...">
     <button id="button_comment" type="submit" class="btn btn-default" disabled="">Post</button>
     <button type="reset" class="btn btn-default">Cancel</button>
