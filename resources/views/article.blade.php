@@ -5,12 +5,6 @@
 <h3>{{$article->title}}</h3>
 <textarea disabled="true" name="content" type="text" class="form-control" rows="15" >{{$article->content}}</textarea>
 
-<ul id="list">
-@foreach ($article->comment as $comment)
-<li><a href="{{route("comment.get", ["id"=>$comment->id])}}">{{$comment->author}}</a></li>
- @endforeach
-</ul>
-
 <form method="POST" action="{{route("comment.post")}}">
   <div class="form-group">
     <label>Author</label>
